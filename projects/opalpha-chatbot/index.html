@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Industrial answers, simplified. — Andika</title>
+    <meta name="description"
+        content="A chatbot feature for OpAlpha that uses regex and fuzzy matching to handle industrial information queries.">
+    <meta name="theme-color" content="#f8f6f1">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%239b2520'/%3E%3Ctext x='10' y='30' font-family='Georgia' font-size='34' fill='%23fff'%3Ea%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../case-study.css">
+    <script src="../../app.js" defer></script>
+</head>
+
+<body><a class="skip" href="#main">Skip to content</a>
+    <div class="header-container" id="header-container">
+        <header class="header"><a class="wordmark" href="../../index.html"
+                aria-label="Andika home">andika<span>.</span></a><button class="menu-toggle" aria-expanded="false"
+                aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+            <nav id="navigation" aria-label="Main navigation"><a href="../../index.html#projects">Projects</a><a
+                    href="../../index.html#research">Research</a><a href="../../index.html#experience">Experience</a><a
+                    href="../../index.html#about">About</a><a class="nav-contact" href="../../index.html#contact">Let’s talk
+                    ↗</a></nav>
+        </header>
+        <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    </div>
+    <main id="main">
+        <div class="wrap case-hero"><a class="back-link" href="../../index.html#projects">← Back to Projects</a>
+            <div class="case-category"><span class="eyebrow">03 / RULE-BASED NLP</span><span
+                    class="case-status">Completed</span></div>
+            <h1>Industrial answers, simplified.</h1>
+            <p class="case-lead">A chatbot feature for OpAlpha that uses regex and fuzzy matching to handle industrial
+                information queries.</p>
+            <dl class="case-facts">
+                <div>
+                    <dt>MY ROLE</dt>
+                    <dd>Chatbot feature development</dd>
+                </div>
+                <div>
+                    <dt>FOCUS</dt>
+                    <dd>Rule-based query handling</dd>
+                </div>
+                <div>
+                    <dt>TECHNOLOGY</dt>
+                    <dd>Regex / Fuzzy Matching</dd>
+                </div>
+            </dl>
+            <aside class="prototype-notice"><strong>Documentation prototype</strong>
+                <p>The project status is separate from this page’s sample content. Illustrative interfaces, media
+                    placeholders, and unfilled test results are clearly marked and can be replaced with actual
+                    documentation.</p>
+            </aside>
+        </div>
+        <div class="wrap case-layout">
+            <aside class="toc">
+                <nav aria-label="On this page"><span class="eyebrow">IN THIS CASE STUDY</span><a href="#overview">01
+                        &nbsp; The problem</a><a href="#contribution">02 &nbsp; My contribution</a><a
+                        href="#approach">03 &nbsp; Approach</a><a href="#documentation">04 &nbsp; Documentation</a><a
+                        href="#evaluation">05 &nbsp; Evaluation</a><a href="#learning">06 &nbsp; Learning</a></nav>
+            </aside>
+            <div class="case-content">
+                <section class="case-section" id="overview">
+                    <div class="eyebrow">01 / THE PROBLEM</div>
+                    <h2>The problem</h2>
+                    <p>Industrial information is often accessed through predefined screens and menus. The OpAlpha
+                        chatbot provides a text-based way to ask questions within the application’s supported scope.</p>
+                    <div class="callout"><strong>Completed implementation. Documentation only.</strong>
+                        <p>This case study presents the chatbot feature I developed. It does not provide access to
+                            OpAlpha or a live chatbot session.</p>
+                    </div>
+                </section>
+                <section class="case-section" id="contribution">
+                    <div class="eyebrow">02 / MY CONTRIBUTION</div>
+                    <h2>My contribution</h2>
+                    <p>I developed the chatbot feature using regex and fuzzy matching, without an LLM or trained AI
+                        model. The portfolio highlights that feature rather than claiming ownership of the entire
+                        OpAlpha application.</p>
+                    <div class="two-col">
+                        <article class="note-card">
+                            <h3>Pattern-based matching</h3>
+                            <p>Use regex rules to recognize supported question patterns.</p>
+                        </article>
+                        <article class="note-card">
+                            <h3>Approximate matching</h3>
+                            <p>Use fuzzy matching to compare text variations against supported examples.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="case-section" id="approach">
+                    <div class="eyebrow">03 / HOW A QUESTION IS HANDLED</div>
+                    <h2>How a question is handled</h2>
+                    <p>Regex and fuzzy matching are the confirmed components. The sequence below is a documentation
+                        prototype to adapt to the actual implementation.</p>
+                    <ol class="flow">
+                        <li><span class="step-number">01</span>
+                            <h3>Input preparation</h3>
+                            <p>Normalize the query as required by the implementation.</p>
+                        </li>
+                        <li><span class="step-number">02</span>
+                            <h3>Regex rules</h3>
+                            <p>Look for a supported question pattern.</p>
+                        </li>
+                        <li><span class="step-number">03</span>
+                            <h3>Fuzzy matching</h3>
+                            <p>Compare variations when exact patterns are insufficient.</p>
+                        </li>
+                        <li><span class="step-number">04</span>
+                            <h3>Response or fallback</h3>
+                            <p>Return a supported response or indicate that the question is not recognized.</p>
+                        </li>
+                    </ol>
+                    <div class="callout subtle"><strong>Matching is not semantic understanding.</strong>
+                        <p>Similar wording can carry different meaning. Document how supported patterns, thresholds, and
+                            fallback behavior help limit incorrect responses. Database integration and other components
+                            should be added only if implemented.</p>
+                    </div>
+                </section>
+                <section class="case-section" id="documentation">
+                    <div class="eyebrow">04 / A CONVERSATION, DOCUMENTED.</div>
+                    <h2>A conversation, documented.</h2>
+                    <p class="sample-label">UI prototype · illustrative messages and dummy data · not a live session.
+                    </p>
+                    <!-- EDIT: Replace this static mockup with your actual screenshots, using the same figure and caption pattern. -->
+                    <figure class="oa-document">
+                        <div class="oa-bar"><span class="mini-mark">OA</span><strong>OpAlpha</strong><span>Industrial
+                                Chatbot</span><span class="oa-doc-label">Documentation</span></div>
+                        <div class="oa-body">
+                            <aside class="oa-sidebar"><span class="oa-selected">Chat documentation</span><span>Query
+                                    examples</span><span>Response notes</span><small>Static interface preview</small>
+                            </aside>
+                            <div class="oa-conversation">
+                                <div class="oa-message user-message"><span>EXAMPLE QUESTION</span>
+                                    <p>Berapa mesin yang aktif?</p>
+                                </div>
+                                <div class="oa-message bot-message"><span>EXAMPLE RESPONSE</span>
+                                    <p>Terdapat 3 mesin aktif dari total 5 mesin.</p><small>Angka contoh, bukan data
+                                        operasional.</small>
+                                </div>
+                                <div class="oa-message user-message"><span>EXAMPLE VARIATION</span>
+                                    <p>brp mesin yg aktf?</p>
+                                </div>
+                                <div class="oa-message bot-message"><span>DOCUMENTATION NOTE</span>
+                                    <p>Use this space to show how the actual matcher handles an abbreviated or
+                                        misspelled question.</p>
+                                </div>
+                                <div class="oa-readonly">Read-only documentation. No live chat is connected.</div>
+                            </div>
+                        </div>
+                        <figcaption>Example layout for a normal query, a response, and a variation. Replace with actual
+                            behavior and anonymized screenshots.</figcaption>
+                    </figure>
+                    <div class="two-col">
+                        <article class="note-card"><span class="slot-label">MATCHING RULE</span>
+                            <h3>Supported pattern</h3>
+                            <pre><code>berapa.*mesin.*aktif</code></pre>
+                            <p class="sample-label">Illustrative regex only; not the production rule.</p>
+                        </article>
+                        <article class="note-card"><span class="slot-label">FALLBACK EXAMPLE</span>
+                            <h3>Question not recognized</h3>
+                            <p>“Maaf, pertanyaan belum dikenali. Coba gunakan pertanyaan tentang informasi yang
+                                tersedia.”</p>
+                            <p class="sample-label">Sample copy; replace with your actual response.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="case-section" id="evaluation">
+                    <div class="eyebrow">05 / TESTING THE BOUNDARIES</div>
+                    <h2>Testing the boundaries</h2>
+                    <p>Document how the chatbot handles supported queries, spelling variations, and questions outside
+                        its scope. Include observed outcomes from the actual application when available.</p>
+                    <div class="table-scroll" tabindex="0" role="region" aria-label="Documentation table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sample input</th>
+                                    <th scope="col">What to check</th>
+                                    <th scope="col">Actual outcome</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Berapa mesin yang aktif?</td>
+                                    <td>Supported regex pattern</td>
+                                    <td>Not documented yet</td>
+                                </tr>
+                                <tr>
+                                    <td>brp mesin yg aktf?</td>
+                                    <td>Fuzzy matching and threshold behavior</td>
+                                    <td>Not documented yet</td>
+                                </tr>
+                                <tr>
+                                    <td>Mesin mana yang tidak aktif?</td>
+                                    <td>Correct handling of negation</td>
+                                    <td>Not documented yet</td>
+                                </tr>
+                                <tr>
+                                    <td>Apa cuaca hari ini?</td>
+                                    <td>Out-of-scope fallback</td>
+                                    <td>Not documented yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="sample-label">These are example test cases, not a report of tests already performed.</p>
+                </section>
+                <section class="case-section" id="learning">
+                    <div class="eyebrow">06 / ENGINEERING LESSONS</div>
+                    <h2>Engineering lessons</h2>
+                    <ul class="editorial-list">
+                        <li><strong>Scope matters:</strong> describe the categories of questions the chatbot supports.
+                        </li>
+                        <li><strong>Thresholds create trade-offs:</strong> document how matching decisions were chosen
+                            and revised.</li>
+                        <li><strong>Fallback is part of the experience:</strong> show what happens when the system
+                            cannot confidently match a question.</li>
+                        <li><strong>Rules need maintenance:</strong> explain how new examples and regression checks can
+                            keep behavior consistent.</li>
+                    </ul>
+                    <p class="sample-label">Reflection prompts for the final case study; replace with lessons from your
+                        own implementation.</p>
+                </section>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="case-end"><a class="button secondary" href="../../index.html#projects">← All projects</a><a
+                    class="next-project" href="../novel-illustration/index.html"><span>NEXT CASE
+                        STUDY</span><strong>SDXL + LoRA fine-tuning ↗</strong></a></div>
+        </div>
+    </main>
+    <footer class="footer wrap"><a class="wordmark" href="../../index.html">andika<span>.</span></a>
+        <p>Made with curiosity. Built with intention.</p><a href="#main">Back to top ↑</a><span>© 2026 Andika</span>
+    </footer>
+</body>
+
+</html>

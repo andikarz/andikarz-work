@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Stories, reimagined. — Andika</title>
+    <meta name="description"
+        content="Visualizing Indonesian novel narratives with Stable Diffusion XL and LoRA fine-tuning.">
+    <meta name="theme-color" content="#f8f6f1">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%239b2520'/%3E%3Ctext x='10' y='30' font-family='Georgia' font-size='34' fill='%23fff'%3Ea%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../case-study.css">
+    <script src="../../app.js" defer></script>
+</head>
+
+<body><a class="skip" href="#main">Skip to content</a>
+    <div class="header-container" id="header-container">
+        <header class="header"><a class="wordmark" href="../../index.html"
+                aria-label="Andika home">andika<span>.</span></a><button class="menu-toggle" aria-expanded="false"
+                aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+            <nav id="navigation" aria-label="Main navigation"><a href="../../index.html#projects">Projects</a><a
+                    href="../../index.html#research">Research</a><a href="../../index.html#experience">Experience</a><a
+                    href="../../index.html#about">About</a><a class="nav-contact" href="../../index.html#contact">Let’s talk
+                    ↗</a></nav>
+        </header>
+        <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    </div>
+    <main id="main">
+        <div class="wrap case-hero"><a class="back-link" href="../../index.html#projects">← Back to Projects</a>
+            <div class="case-category"><span class="eyebrow">01 / GENERATIVE AI</span><span
+                    class="case-status">Completed</span></div>
+            <h1>Stories, reimagined.</h1>
+            <p class="case-lead">Visualizing Indonesian novel narratives with Stable Diffusion XL and LoRA fine-tuning.
+            </p>
+            <dl class="case-facts">
+                <div>
+                    <dt>MY ROLE</dt>
+                    <dd>Individual final project</dd>
+                </div>
+                <div>
+                    <dt>FOCUS</dt>
+                    <dd>Data · Fine-tuning · Evaluation</dd>
+                </div>
+                <div>
+                    <dt>TECHNOLOGY</dt>
+                    <dd>Python / SDXL / LoRA</dd>
+                </div>
+            </dl>
+            <aside class="prototype-notice"><strong>Documentation prototype</strong>
+                <p>The project status is separate from this page’s sample content. Illustrative interfaces, media
+                    placeholders, and unfilled test results are clearly marked and can be replaced with actual
+                    documentation.</p>
+            </aside>
+        </div>
+        <div class="wrap case-layout">
+            <aside class="toc">
+                <nav aria-label="On this page"><span class="eyebrow">IN THIS CASE STUDY</span><a href="#overview">01
+                        &nbsp; The problem</a><a href="#contribution">02 &nbsp; My contribution</a><a
+                        href="#approach">03 &nbsp; Approach</a><a href="#documentation">04 &nbsp; Documentation</a><a
+                        href="#evaluation">05 &nbsp; Evaluation</a><a href="#learning">06 &nbsp; Learning</a></nav>
+            </aside>
+            <div class="case-content">
+                <section class="case-section" id="overview">
+                    <div class="eyebrow">01 / THE PROBLEM</div>
+                    <h2>The problem</h2>
+                    <p>Indonesian novel narratives contain visual details, settings, and a distinctive illustration
+                        style. This final project explores adapting a pretrained text-to-image model to that context
+                        through LoRA fine-tuning.</p>
+                    <div class="callout"><strong>Project focus</strong>
+                        <p>Generate illustrations from novel narratives, then evaluate how well the results follow the
+                            intended style and content.</p>
+                    </div>
+                </section>
+                <section class="case-section" id="contribution">
+                    <div class="eyebrow">02 / MY CONTRIBUTION</div>
+                    <h2>My contribution</h2>
+                    <p>I prepared the image–caption data, fine-tuned SDXL using LoRA, generated illustrations, and
+                        evaluated the resulting images as part of my final project.</p>
+                    <div class="two-col">
+                        <article class="note-card">
+                            <h3>Data and experiments</h3>
+                            <p>Dataset preparation, captioning, training configurations, and generation experiments.</p>
+                        </article>
+                        <article class="note-card">
+                            <h3>Evaluation and analysis</h3>
+                            <p>Comparison of image quality, prompt alignment, visual similarity, and human feedback.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="case-section" id="approach">
+                    <div class="eyebrow">03 / FROM NARRATIVE TO ILLUSTRATION</div>
+                    <h2>From narrative to illustration</h2>
+                    <p class="sample-label">High-level documentation template · replace with your final experiment
+                        configuration.</p>
+                    <ol class="flow">
+                        <li><span class="step-number">01</span>
+                            <h3>Prepare data</h3>
+                            <p>Collect and prepare image–caption pairs.</p>
+                        </li>
+                        <li><span class="step-number">02</span>
+                            <h3>Fine-tune</h3>
+                            <p>Adapt SDXL with LoRA on the selected dataset.</p>
+                        </li>
+                        <li><span class="step-number">03</span>
+                            <h3>Generate</h3>
+                            <p>Use evaluation prompts to produce illustrations.</p>
+                        </li>
+                        <li><span class="step-number">04</span>
+                            <h3>Evaluate</h3>
+                            <p>Compare outputs and document limitations.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section class="case-section" id="documentation">
+                    <div class="eyebrow">04 / VISUAL DOCUMENTATION</div>
+                    <h2>Visual documentation</h2>
+                    <p>The layout below is a prototype for presenting a prompt beside its output. The image is an
+                        illustration from the design mockup, not an output of the trained model.</p>
+                    <!-- EDIT: Replace the image window with <img class="actual-media" src="../../assets/projects/lora/result-01.webp" alt="Description of your actual generated result">. -->
+                    <figure class="prompt-result">
+                        <div class="prompt-panel"><span class="eyebrow">EXAMPLE PROMPT</span>
+                            <blockquote>“A quiet village at the foot of a mountain, with a traveler walking through the
+                                morning light.”</blockquote>
+                            <p class="sample-label">Illustrative prompt, not an experiment record.</p>
+                        </div>
+                        <div class="project-art">
+                            <div class="image-window story-window"><img src="../../assets/project-preview.png"
+                                    alt="Illustrative landscape from the design mockup" loading="lazy"></div><span
+                                class="art-note">Illustrative preview</span>
+                        </div>
+                        <figcaption>Documentation prototype: prompt on the left, generated result on the right.
+                        </figcaption>
+                    </figure>
+                    <div class="two-col">
+                        <div class="media-placeholder"><span class="slot-label">01 / DATASET</span>
+                            <h3>Dataset samples</h3>
+                            <p>Space for selected image–caption examples.</p>
+                        </div>
+                        <div class="media-placeholder"><span class="slot-label">02 / COMPARISON</span>
+                            <h3>Before and after fine-tuning</h3>
+                            <p>Space for a matched-prompt comparison.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="case-section" id="evaluation">
+                    <div class="eyebrow">05 / EVALUATION & RESULTS</div>
+                    <h2>Evaluation & results</h2>
+                    <p>Use this section to explain what each evaluation captures and how the results informed your
+                        conclusions. Numeric results are intentionally left unfilled.</p>
+                    <div class="table-scroll" tabindex="0" role="region" aria-label="Documentation table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Measure</th>
+                                    <th scope="col">What to document</th>
+                                    <th scope="col">Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FID</td>
+                                    <td>Distribution-level image comparison</td>
+                                    <td>Not added yet</td>
+                                </tr>
+                                <tr>
+                                    <td>CLIP</td>
+                                    <td>Image–text alignment</td>
+                                    <td>Not added yet</td>
+                                </tr>
+                                <tr>
+                                    <td>PSNR / SSIM</td>
+                                    <td>Pixel and structural similarity with context</td>
+                                    <td>Not added yet</td>
+                                </tr>
+                                <tr>
+                                    <td>Human evaluation</td>
+                                    <td>Questions, respondents, and assessment criteria</td>
+                                    <td>Not added yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="sample-label">Documentation template. These cells do not represent measured results.</p>
+                </section>
+                <section class="case-section" id="learning">
+                    <div class="eyebrow">06 / LIMITATIONS & LEARNING</div>
+                    <h2>Limitations & learning</h2>
+                    <p>Document where the model performs well, where it struggles, and which design decisions you would
+                        revisit.</p>
+                    <ul class="editorial-list">
+                        <li><strong>Dataset coverage:</strong> describe visual themes represented and missing.</li>
+                        <li><strong>Prompt alignment:</strong> include both successful and unsuccessful examples.</li>
+                        <li><strong>Evaluation context:</strong> explain why a single score does not describe the full
+                            quality of generated images.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="case-end"><a class="button secondary" href="../../index.html#projects">← All projects</a><a
+                    class="next-project" href="../injection-molding-vision/index.html"><span>NEXT CASE
+                        STUDY</span><strong>Injection molding vision ↗</strong></a></div>
+        </div>
+    </main>
+    <footer class="footer wrap"><a class="wordmark" href="../../index.html">andika<span>.</span></a>
+        <p>Made with curiosity. Built with intention.</p><a href="#main">Back to top ↑</a><span>© 2026 Andika</span>
+    </footer>
+</body>
+
+</html>
