@@ -1,3 +1,5 @@
+> **Pembaruan foto:** Foto profil dan galeri kegiatan/proyek sekarang diatur melalui `media-config.js`. Baca [PHOTO_GUIDE.md](PHOTO_GUIDE.md) untuk mengganti placeholder, menambah foto, dan menangani cache.
+
 # Portfolio Andika — v2
 
 HTML, CSS, dan JavaScript statis. Tidak perlu npm install, database, API key, atau build.

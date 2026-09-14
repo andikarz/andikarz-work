@@ -1,3 +1,5 @@
+> **Pembaruan foto:** Foto profil dan galeri kegiatan/proyek sekarang diatur melalui `media-config.js`. Baca [PHOTO_GUIDE.md](PHOTO_GUIDE.md) untuk mengganti placeholder, menambah foto, dan menangani cache.
+
 # Panduan mengganti dokumentasi contoh
 
 ## 1. Ubah teks dan status

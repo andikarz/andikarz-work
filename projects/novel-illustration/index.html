@@ -10,9 +10,199 @@
     <meta name="theme-color" content="#f8f6f1">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%239b2520'/%3E%3Ctext x='10' y='30' font-family='Georgia' font-size='34' fill='%23fff'%3Ea%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../../case-study.css">
-    <script src="../../app.js" defer></script>
+    <link rel="stylesheet" href="../../styles.css?v=photos-1">
+    <link rel="stylesheet" href="../../case-study.css?v=photos-1">
+    <script src="../../app.js?v=photos-1" defer></script>
+    <link rel="stylesheet" href="../../photo-gallery.css?v=photos-1">
+    <script src="../../media-config.js?v=photos-1" defer></script>
+    <script src="../../photo-gallery.js?v=photos-1" defer></script>
+
+    <style>
+        /* Page-only technical case study; shared portfolio styles are unchanged. */
+        .research-stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+            margin: 32px 0 0;
+            padding: 24px 0;
+            border-top: 1px solid var(--line)
+        }
+
+        .research-stats div {
+            min-width: 0
+        }
+
+        .research-stats dt {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 8px
+        }
+
+        .research-stats dd {
+            font-size: 32px;
+            margin: 0;
+            color: var(--red);
+            font-variant-numeric: tabular-nums
+        }
+
+        .research-source {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.7
+        }
+
+        .technical-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            font-variant-numeric: tabular-nums
+        }
+
+        .technical-table caption {
+            text-align: left;
+            padding: 0 0 12px;
+            font-weight: 600;
+            color: var(--muted)
+        }
+
+        .technical-table th,
+        .technical-table td {
+            padding: 13px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .technical-table thead {
+            background: #eeeae1
+        }
+
+        .technical-table .chosen {
+            background: #f2e9e2
+        }
+
+        .technical-table strong {
+            color: var(--red)
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 24px;
+            margin: 24px 0
+        }
+
+        .config-grid div {
+            padding: 13px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .config-grid dt {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .config-grid dd {
+            margin: 5px 0 0;
+            font-family: monospace;
+            font-size: 15px;
+            overflow-wrap: anywhere
+        }
+
+        .technical-media {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin: 24px 0
+        }
+
+        .technical-media figure {
+            margin: 0;
+            min-width: 0
+        }
+
+        .technical-media .image-frame {
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: #eeeae1;
+            border: 1px solid var(--line);
+            border-radius: 8px
+        }
+
+        .technical-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .technical-media figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            padding-top: 8px;
+            line-height: 1.5
+        }
+
+        .technical-code {
+            background: #eeeae1;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 18px;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font-size: 13px;
+            line-height: 1.7
+        }
+
+        .case-section {
+            scroll-margin-top: 150px
+        }
+
+        .toc {
+            top: 145px
+        }
+
+        .technical-details {
+            border: 1px solid var(--line);
+            padding: 18px;
+            border-radius: 8px;
+            margin: 24px 0
+        }
+
+        .technical-details summary {
+            cursor: pointer;
+            font-weight: 600
+        }
+
+        .technical-details .table-scroll {
+            margin-top: 20px
+        }
+
+        @media(max-width:700px) {
+            .research-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .config-grid {
+                grid-template-columns: 1fr
+            }
+
+            .technical-media {
+                grid-template-columns: 1fr
+            }
+
+            .technical-media .image-frame {
+                aspect-ratio: 4/3
+            }
+
+            .technical-table {
+                min-width: 600px
+            }
+
+            .toc {
+                position: static
+            }
+        }
+    </style>
 </head>
 
 <body><a class="skip" href="#main">Skip to content</a>
@@ -49,153 +239,388 @@
                     <dd>Python / SDXL / LoRA</dd>
                 </div>
             </dl>
-            <aside class="prototype-notice"><strong>Documentation prototype</strong>
-                <p>The project status is separate from this page’s sample content. Illustrative interfaces, media
-                    placeholders, and unfilled test results are clearly marked and can be replaced with actual
-                    documentation.</p>
-            </aside>
+            <p class="research-source">Undergraduate research · Telkom University · 2026<br>SDXL adaptation for
+                Indonesian novel illustration, with a controlled comparison of LoRA rank and batch size.</p>
+            <dl class="research-stats" aria-label="Study at a glance">
+                <div>
+                    <dt>Image–caption pairs</dt>
+                    <dd>210</dd>
+                </div>
+                <div>
+                    <dt>Training scenarios</dt>
+                    <dd>4</dd>
+                </div>
+                <div>
+                    <dt>Evaluation images</dt>
+                    <dd>2,640</dd>
+                </div>
+                <div>
+                    <dt>Human evaluators</dt>
+                    <dd>40</dd>
+                </div>
+            </dl>
         </div>
         <div class="wrap case-layout">
             <aside class="toc">
-                <nav aria-label="On this page"><span class="eyebrow">IN THIS CASE STUDY</span><a href="#overview">01
-                        &nbsp; The problem</a><a href="#contribution">02 &nbsp; My contribution</a><a
-                        href="#approach">03 &nbsp; Approach</a><a href="#documentation">04 &nbsp; Documentation</a><a
-                        href="#evaluation">05 &nbsp; Evaluation</a><a href="#learning">06 &nbsp; Learning</a></nav>
+                <nav aria-label="On this page"><span class="eyebrow">IN THIS CASE STUDY</span>
+                    <a href="#overview">01 &nbsp; Problem &amp; role</a><a href="#dataset">02 &nbsp; Dataset &amp;
+                        preparation</a>
+                    <a href="#approach">03 &nbsp; Training design</a><a href="#documentation">04 &nbsp; Visual
+                        documentation</a>
+                    <a href="#evaluation">05 &nbsp; Results &amp; trade-offs</a><a href="#learning">06 &nbsp;
+                        Limitations &amp; next steps</a>
+                </nav>
             </aside>
             <div class="case-content">
+
                 <section class="case-section" id="overview">
-                    <div class="eyebrow">01 / THE PROBLEM</div>
-                    <h2>The problem</h2>
-                    <p>Indonesian novel narratives contain visual details, settings, and a distinctive illustration
-                        style. This final project explores adapting a pretrained text-to-image model to that context
-                        through LoRA fine-tuning.</p>
-                    <div class="callout"><strong>Project focus</strong>
-                        <p>Generate illustrations from novel narratives, then evaluate how well the results follow the
-                            intended style and content.</p>
+                    <div class="eyebrow">01 / PROBLEM &amp; OWNERSHIP</div>
+                    <h2>Adapting a general model to a specific visual world.</h2>
+                    <p>This final project investigates whether Stable Diffusion XL can be adapted to illustrate
+                        Indonesian novel narratives using Low-Rank Adaptation (LoRA). The experiment compares four
+                        configurations to understand how adapter rank and batch size affect visual quality, text
+                        alignment, and training stability.</p>
+                    <div class="callout"><strong>The engineering question</strong>
+                        <p>Which rank–batch combination offers the most useful balance across multiple evaluation
+                            metrics on this dataset?</p>
                     </div>
-                </section>
-                <section class="case-section" id="contribution">
-                    <div class="eyebrow">02 / MY CONTRIBUTION</div>
-                    <h2>My contribution</h2>
-                    <p>I prepared the image–caption data, fine-tuned SDXL using LoRA, generated illustrations, and
-                        evaluated the resulting images as part of my final project.</p>
-                    <div class="two-col">
+                    <div class="two-col" id="contribution">
                         <article class="note-card">
-                            <h3>Data and experiments</h3>
-                            <p>Dataset preparation, captioning, training configurations, and generation experiments.</p>
+                            <h3>What I Did</h3>
+                            <p>I prepared the image–caption dataset, configured and trained four LoRA variants,
+                                generated evaluation images, and analyzed quantitative metrics and human feedback for my
+                                individual final project.</p>
                         </article>
                         <article class="note-card">
-                            <h3>Evaluation and analysis</h3>
-                            <p>Comparison of image quality, prompt alignment, visual similarity, and human feedback.</p>
+                            <h3>Scope</h3>
+                            <p>A completed research experiment in dataset preparation, parameter-efficient adaptation,
+                                and model evaluation. This page documents the study rather than a deployed illustration
+                                service.</p>
                         </article>
                     </div>
                 </section>
-                <section class="case-section" id="approach">
-                    <div class="eyebrow">03 / FROM NARRATIVE TO ILLUSTRATION</div>
-                    <h2>From narrative to illustration</h2>
-                    <p class="sample-label">High-level documentation template · replace with your final experiment
-                        configuration.</p>
+                <section class="case-section" id="dataset">
+                    <div class="eyebrow">02 / DATASET &amp; PREPARATION</div>
+                    <h2>210 images. A repeatable preparation pipeline.</h2>
+                    <p>The dataset was collected from Wattpad: 90 novel covers from multiple titles and 120 scene
+                        illustrations from <em>Laut di Utara: The Northern Sea</em>. Each image was paired with a
+                        caption, producing 210 training pairs.</p>
                     <ol class="flow">
                         <li><span class="step-number">01</span>
-                            <h3>Prepare data</h3>
-                            <p>Collect and prepare image–caption pairs.</p>
+                            <h3>Standardize</h3>
+                            <p>Center-crop to a square, then resize to 1024 × 1024 pixels.</p>
                         </li>
                         <li><span class="step-number">02</span>
-                            <h3>Fine-tune</h3>
-                            <p>Adapt SDXL with LoRA on the selected dataset.</p>
+                            <h3>Caption</h3>
+                            <p>Generate visual descriptions automatically using BLIP.</p>
                         </li>
                         <li><span class="step-number">03</span>
-                            <h3>Generate</h3>
-                            <p>Use evaluation prompts to produce illustrations.</p>
+                            <h3>Add a trigger</h3>
+                            <p>Prefix each caption with <code>LutNS</code> to associate it with the target visual style.
+                            </p>
                         </li>
                         <li><span class="step-number">04</span>
-                            <h3>Evaluate</h3>
-                            <p>Compare outputs and document limitations.</p>
+                            <h3>Package</h3>
+                            <p>Store the image–caption metadata in JSONL for training.</p>
                         </li>
                     </ol>
-                </section>
-                <section class="case-section" id="documentation">
-                    <div class="eyebrow">04 / VISUAL DOCUMENTATION</div>
-                    <h2>Visual documentation</h2>
-                    <p>The layout below is a prototype for presenting a prompt beside its output. The image is an
-                        illustration from the design mockup, not an output of the trained model.</p>
-                    <!-- EDIT: Replace the image window with <img class="actual-media" src="../../assets/projects/lora/result-01.webp" alt="Description of your actual generated result">. -->
-                    <figure class="prompt-result">
-                        <div class="prompt-panel"><span class="eyebrow">EXAMPLE PROMPT</span>
-                            <blockquote>“Sitting comfortably in front of rows of books, a woman enjoys a quiet moment
-                                reading an open book in her hands”</blockquote>
-                            <p class="sample-label">Illustrative prompt, not an experiment record.</p>
-                        </div>
-                        <div class="project-art">
-                            <img class="actual-media" src="../../assets/projects/lora/result-01.webp"
-                                alt="Visualizing Indonesian novel narratives with SDXL and LoRA" loading="lazy">
-                        </div>
-                        <figcaption>Documentation prototype: prompt on the left, generated result on the right.
-                        </figcaption>
-                    </figure>
-                    <div class="two-col">
-                        <div class="media-placeholder"><span class="slot-label">01 / DATASET</span>
-                            <h3>Dataset samples</h3>
-                            <p>Space for selected image–caption examples.</p>
-                        </div>
-                        <div class="media-placeholder"><span class="slot-label">02 / COMPARISON</span>
-                            <h3>Before and after fine-tuning</h3>
-                            <p>Space for a matched-prompt comparison.</p>
-                        </div>
+                    <p class="research-source">Example below illustrates the caption format, it is not a downloadable
+                        training record.</p>
+                    <div class="technical-media">
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/dataset-sample-01.webp"
+                                    alt="Novel illustration dataset sample 1" loading="lazy" width="1024" height="1024">
+                            </div>
+                            <figcaption>Dataset sample 01 · existing project documentation</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/dataset-sample-02.webp"
+                                    alt="Novel illustration dataset sample 2" loading="lazy" width="1024" height="1024">
+                            </div>
+                            <figcaption>Dataset sample 02 · existing project documentation</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/dataset-sample-03.webp"
+                                    alt="Novel illustration dataset sample 3" loading="lazy" width="1024" height="1024">
+                            </div>
+                            <figcaption>Dataset sample 03 · existing project documentation</figcaption>
+                        </figure>
                     </div>
+                    <p class="research-source">The sample images are retained from the portfolio assets. They are shown
+                        as dataset examples without assigning unverified captions.</p>
                 </section>
-                <section class="case-section" id="evaluation">
-                    <div class="eyebrow">05 / EVALUATION & RESULTS</div>
-                    <h2>Evaluation & results</h2>
-                    <p>Use this section to explain what each evaluation captures and how the results informed your
-                        conclusions. Numeric results are intentionally left unfilled.</p>
-                    <div class="table-scroll" tabindex="0" role="region" aria-label="Documentation table">
-                        <table>
+                <section class="case-section" id="approach">
+                    <div class="eyebrow">03 / TRAINING DESIGN</div>
+                    <h2>One base model. Four controlled configurations.</h2>
+                    <p>LoRA adapts SDXL through low-rank weight updates instead of full fine-tuning. The study varies
+                        rank (16 or 32) and batch size (8 or 16), while keeping the reported core training settings
+                        constant.</p>
+                    <dl class="config-grid">
+                        <div>
+                            <dt>BASE MODEL</dt>
+                            <dd>Stable Diffusion XL Base 1.0</dd>
+                        </div>
+                        <div>
+                            <dt>ADAPTATION</dt>
+                            <dd>LoRA</dd>
+                        </div>
+                        <div>
+                            <dt>TRAINING RESOLUTION</dt>
+                            <dd>1024 × 1024</dd>
+                        </div>
+                        <div>
+                            <dt>OPTIMIZER</dt>
+                            <dd>8-bit Adam</dd>
+                        </div>
+                        <div>
+                            <dt>LEARNING RATE</dt>
+                            <dd>0.0001 (1e-4)</dd>
+                        </div>
+                        <div>
+                            <dt>TRAINING DURATION</dt>
+                            <dd>100 epochs</dd>
+                        </div>
+                        <div>
+                            <dt>MIXED PRECISION</dt>
+                            <dd>BF16</dd>
+                        </div>
+                        <div>
+                            <dt>TRAINING SEED</dt>
+                            <dd>34567</dd>
+                        </div>
+                    </dl>
+                    <p class="research-source">The seed above is the reported training seed, not an asserted seed for
+                        the gallery images.</p>
+                    <div class="table-scroll" tabindex="0" role="region" aria-label="Training scenarios">
+                        <table class="technical-table">
+                            <caption>Experiment matrix</caption>
                             <thead>
                                 <tr>
-                                    <th scope="col">Measure</th>
-                                    <th scope="col">What to document</th>
-                                    <th scope="col">Result</th>
+                                    <th scope="col">Scenario</th>
+                                    <th scope="col">LoRA rank</th>
+                                    <th scope="col">Batch size</th>
+                                    <th scope="col">Epochs</th>
+                                    <th scope="col">Total steps</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>FID</td>
-                                    <td>Distribution-level image comparison</td>
-                                    <td>135.61</td>
+                                    <th scope="row">S1</th>
+                                    <td>16</td>
+                                    <td>8</td>
+                                    <td>100</td>
+                                    <td>2,700</td>
                                 </tr>
                                 <tr>
-                                    <td>CLIP</td>
-                                    <td>Image–text alignment</td>
-                                    <td>28.12</td>
+                                    <th scope="row">S2</th>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>100</td>
+                                    <td>1,400</td>
                                 </tr>
                                 <tr>
-                                    <td>PSNR / SSIM</td>
-                                    <td>Pixel and structural similarity with context</td>
-                                    <td>9.56 / 0.41</td>
+                                    <th scope="row">S3</th>
+                                    <td>32</td>
+                                    <td>8</td>
+                                    <td>100</td>
+                                    <td>2,700</td>
                                 </tr>
-                                <tr>
-                                    <td>Human evaluation</td>
-                                    <td>Questions, respondents, and assessment criteria</td>
-                                    <td>71.6%</td>
+                                <tr class="chosen">
+                                    <th scope="row">S4</th>
+                                    <td>32</td>
+                                    <td>16</td>
+                                    <td>100</td>
+                                    <td>1,400</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="sample-label">Documentation template. These cells do not represent measured results.</p>
+                    <details class="technical-details">
+                        <summary>Inspect training loss and stability</summary>
+                        <div class="table-scroll" tabindex="0" role="region" aria-label="Training loss statistics">
+                            <table class="technical-table">
+                                <caption>Reported training statistics</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Scenario</th>
+                                        <th scope="col">Mean loss</th>
+                                        <th scope="col">Std. deviation</th>
+                                        <th scope="col">CV (%) ↓</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">S1</th>
+                                        <td>0.105651</td>
+                                        <td>0.042119</td>
+                                        <td>39.87</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">S2</th>
+                                        <td>0.105842</td>
+                                        <td>0.036204</td>
+                                        <td><strong>34.21</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">S3</th>
+                                        <td>0.105194</td>
+                                        <td>0.041886</td>
+                                        <td>39.82</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">S4</th>
+                                        <td>0.106073</td>
+                                        <td>0.037130</td>
+                                        <td>35.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>S2 has the lowest loss variability, with S4 close behind. Lower training loss alone does not
+                            establish better generated images. At equal epochs, the larger batches result in fewer
+                            optimization steps.</p>
+                    </details>
+                </section>
+                <section class="case-section" id="documentation">
+                    <div class="eyebrow">04 / VISUAL DOCUMENTATION</div>
+                    <h2>Outputs, with their context preserved.</h2>
+                    <p>These images are retained from the project’s existing output assets. Scenario IDs, inference
+                        settings, and exact prompt–image mappings have not been verified against experiment logs, so the
+                        gallery is separate from the measured scenario comparison below.</p>
+                    <div class="technical-media">
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/result-01.webp"
+                                    alt="Illustration output from existing project assets, example 1" loading="lazy"
+                                    width="1024" height="1024"></div>
+                            <figcaption>Output 01 · scenario not specified</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/result-02.webp"
+                                    alt="Illustration output from existing project assets, example 2" loading="lazy"
+                                    width="1024" height="1024"></div>
+                            <figcaption>Output 02 · scenario not specified</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="image-frame"><img src="../../assets/projects/lora/result-03.webp"
+                                    alt="Illustration output from existing project assets, example 3" loading="lazy"
+                                    width="1024" height="1024"></div>
+                            <figcaption>Output 03 · scenario not specified</figcaption>
+                        </figure>
+                    </div>
+                    <div class="photo-gallery" data-photo-gallery="project-lora"><noscript>Enable JavaScript to view
+                            additional photo documentation.</noscript></div>
+                </section>
+                <section class="case-section" id="evaluation">
+                    <div class="eyebrow">05 / RESULTS &amp; TRADE-OFFS</div>
+                    <h2>Different metrics favor different models.</h2>
+                    <p>Evaluation used the same 165 prompts, randomly selected from dataset metadata, for all four
+                        scenarios. Each prompt produced four variations: 660 images per scenario, or 2,640 images
+                        overall.</p>
+                    <div class="table-scroll" tabindex="0" role="region" aria-label="Evaluation results by scenario">
+                        <table class="technical-table">
+                            <caption>Quantitative results · thesis Tables 4.8–4.11</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Scenario</th>
+                                    <th scope="col">FID ↓</th>
+                                    <th scope="col">CLIP ↑</th>
+                                    <th scope="col">PSNR (dB) ↑</th>
+                                    <th scope="col">SSIM ↑</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">S1</th>
+                                    <td>132.49</td>
+                                    <td>27.91</td>
+                                    <td>9.498</td>
+                                    <td>0.403</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">S2</th>
+                                    <td>135.61</td>
+                                    <td><strong>28.12</strong></td>
+                                    <td>9.564</td>
+                                    <td>0.413</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">S3</th>
+                                    <td><strong>127.29</strong></td>
+                                    <td>27.52</td>
+                                    <td>9.472</td>
+                                    <td>0.414</td>
+                                </tr>
+                                <tr class="chosen">
+                                    <th scope="row">S4 · selected</th>
+                                    <td>129.91</td>
+                                    <td>27.77</td>
+                                    <td><strong>9.594</strong></td>
+                                    <td><strong>0.416</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="research-source">Bold values indicate the best score among these four scenarios. ↓ Lower
+                        is better; ↑ higher is better. These are study-specific scores, not universal quality
+                        thresholds.</p>
+                    <div class="two-col">
+                        <article class="note-card">
+                            <h3>Distribution &amp; alignment</h3>
+                            <p>FID compares generated and reference image distributions; S3 scores lowest. CLIP measures
+                                image–text alignment; S2 scores highest. Neither model leads across all metrics.</p>
+                        </article>
+                        <article class="note-card">
+                            <h3>Pixel &amp; structural similarity</h3>
+                            <p>PSNR and SSIM compare outputs with reference images. S4 leads on both, but similarity to
+                                a reference is only one aspect of a useful narrative illustration.</p>
+                        </article>
+                    </div>
+                    <div class="callout"><strong>Selected configuration: S4 · rank 32 / batch 16</strong>
+                        <p>The thesis selects S4 for its balance across the reported metrics: highest PSNR and SSIM,
+                            with FID and CLIP scores between the best and worst observed values. This is a multi-metric
+                            decision, not a claim that S4 wins every measure.</p>
+                    </div>
+                    <h3>Human evaluation: 71.64% of the maximum score</h3>
+                    <p>40 respondents rated 32 prompt–image questions using a 1–5 Likert scale for image–prompt
+                        suitability. The study reports a total score of 4,585 out of 6,400.</p>
+                    <pre class="technical-code"><code>Maximum score = 40 respondents × 32 questions × 5 = 6,400
+Normalized score = 4,585 / 6,400 × 100 = 71.64%</code></pre>
+                    <p class="research-source">Source: Tables 4.12–4.13 and accompanying discussion. This is a
+                        normalized questionnaire score, not classification accuracy or the percentage of respondents who
+                        approved. The thesis reports an aggregate result rather than a per-scenario human score table.
+                    </p>
                 </section>
                 <section class="case-section" id="learning">
-                    <div class="eyebrow">06 / LIMITATIONS & LEARNING</div>
-                    <h2>Limitations & learning</h2>
-                    <p>Document where the model performs well, where it struggles, and which design decisions you would
-                        revisit.</p>
+                    <div class="eyebrow">06 / LIMITATIONS &amp; NEXT STEPS</div>
+                    <h2>What the evidence supports—and what comes next.</h2>
                     <ul class="editorial-list">
-                        <li><strong>Dataset coverage:</strong> describe visual themes represented and missing.</li>
-                        <li><strong>Prompt alignment:</strong> include both successful and unsuccessful examples.</li>
-                        <li><strong>Evaluation context:</strong> explain why a single score does not describe the full
-                            quality of generated images.</li>
+                        <li><strong>Limited visual coverage.</strong> The dataset contains 210 images, with all 120
+                            scene illustrations drawn from one title. Broader genres, settings, and characters are
+                            needed before drawing conclusions about Indonesian novel illustration in general.</li>
+                        <li><strong>Evaluation prompts come from dataset metadata.</strong> The reported protocol does
+                            not establish an independent held-out prompt benchmark. A next experiment should separate
+                            training and evaluation material to test generalization.</li>
+                        <li><strong>No measured baseline in this comparison.</strong> The result tables compare four
+                            fine-tuned variants. They do not quantify improvement over an untuned SDXL baseline; that
+                            requires a matched evaluation.</li>
+                        <li><strong>Metrics answer different questions.</strong> Reference similarity, distribution
+                            similarity, and semantic alignment should be interpreted together with human judgments. The
+                            reported results do not establish statistical significance across repeated training runs.
+                        </li>
+                        <li><strong>Next experiments.</strong> Expand the dataset and explore learning rate, epoch
+                            count, network alpha, and additional ranks, as suggested in the thesis. Also retain
+                            inference settings and prompt–seed records for reproducible visual comparisons.</li>
                     </ul>
+                    <div class="callout"><strong>My main takeaway</strong>
+                        <p>Fine-tuning is only one part of the work. Dataset construction, a controlled experiment
+                            matrix, and transparent interpretation of conflicting metrics are just as important when
+                            deciding which model to use.</p>
+                    </div>
+                    <p class="research-source">Source: Andika Rizki Putra Pamungkas (2026), <cite>Text-to-Image
+                            Generation dalam Sastra: Studi Kasus Novel Indonesia dengan Metode Latent Diffusion
+                            Model.</p>
                 </section>
+
             </div>
         </div>
         <div class="wrap">

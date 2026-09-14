@@ -1087,20 +1087,19 @@ em {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.3fr;
-    gap: 65px;
-}
-
-.about-grid h2 {
-    font-size: 60px;
-    letter-spacing: -1.3px;
-    margin-top: 22px;
+    grid-template-columns: 320px 1fr;
+    gap: 55px;
+    align-items: start;
 }
 
 .about-copy > p {
     font-size: 16px;
     color: var(--muted);
     margin-bottom: 17px;
+}
+
+.about-copy > p:first-child {
+    margin-top: 0;
 }
 
 .about-copy strong {
