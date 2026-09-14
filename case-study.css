@@ -282,7 +282,17 @@ figcaption {
 }
 
 .prompt-result>.project-art {
-    min-height: 280px
+    min-height: 280px;
+    background: #ebe7df;
+}
+
+.prompt-result>.project-art>.actual-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 0;
 }
 
 .prompt-result .story-window img {
@@ -609,7 +619,7 @@ pre {
     }
 
     .prompt-result>.project-art {
-        height: 290px
+        height: 290px;
     }
 
     .prompt-result .story-window {
@@ -722,7 +732,7 @@ pre {
     }
 
     .prompt-result>.project-art {
-        height: 235px
+        height: 235px;
     }
 
     .prompt-panel {
